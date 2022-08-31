@@ -8,6 +8,7 @@ import {useRecoilState} from 'recoil';
 import { useNavigate } from "react-router-dom";
 const Login = (props) => {
     let navigate = useNavigate();
+    // eslint-disable-next-line 
     const [auth, setAuth] = useRecoilState(AuthStore);
     const [formData, setFormData] = useState({
         email: "",
@@ -34,7 +35,7 @@ const Login = (props) => {
     }
 
     return (<>
-        <div className="min-h-screen bg-slate-500 flex justify-center items-center">
+        <div className="min-h-screen bg-slate-500 flex flex-col justify-center items-center">
             <div className="max-w-md bg-slate-200 rounded-sm shadow-sm flex flex-col">
                 <div className="logo m-1 p-1 mx-2">
                     <FcUnlock size={60}></FcUnlock>
@@ -57,6 +58,11 @@ const Login = (props) => {
                     <button onClick={formHandler} type="submit" className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </div>
             </div>
+            <div className="my-4 rounded-sm p-2 shadow-sm flex flex-col bg-slate-200"> 
+                <span>Demo Username : demouser01@gmail.com</span>
+                <span>Demo Password : demopass</span>
+            </div>
+
         </div>
 
     </>);

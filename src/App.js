@@ -7,14 +7,11 @@ import Dashboard from './pages/dashboard';
 import Album from './pages/album';
 import Profile from './pages/profile';
 import { AuthStore } from './store/authstore';
-
-import {useRecoilState} from 'recoil';
+import { useRecoilValue } from 'recoil';
 import Shared from './pages/shared';
 
 function App() {
-  const [auth, setAuth] = useRecoilState(AuthStore);
-
-
+  const auth = useRecoilValue(AuthStore)
   return (
     <Routes>
         <Route path="/register" element={<Register></Register>} />
