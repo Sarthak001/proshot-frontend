@@ -23,9 +23,8 @@ const DashboardAlbums = () => {
             {
                 albums.length > 0 &&
                 albums.map((album,index) =>{
-                    console.log(album)
                     return(
-                        <DashboardAlbumsCard albumInfo={album}  />
+                        <DashboardAlbumsCard key={index} albumInfo={album}  />
                     )
                 })
             }

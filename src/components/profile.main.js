@@ -18,14 +18,15 @@ const ProfileMain = () => {
 
     useEffect(()=>{
         const data = async ()=>{
-            const response = await getProfile(auth.token,auth.userName)
+            const response = await getProfile(auth.token)
             if (response.statusCode === 200){
                 setFormData({...formData,firstName:response.firstName,lastName:response.lastName,userName:response.userName,email:response.email})
+                return
             }
             alert("Something went worng")
         }
         data()
-    })
+    },[])
 
     const formHandler = async () => {
         alert("Details Will Update Shortly")

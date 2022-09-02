@@ -49,7 +49,7 @@ export default function BasicGallery(props) {
 
     return (
         <>
-            <div className="columns-2 md:columns-3 lg:columns-3 xl:columns-4">
+            <div className="columns-1 md:columns-3 lg:columns-3 xl:columns-4">
 
                 {imgs.map((img, index) => {
                     if (imgs.length === index + 1) {

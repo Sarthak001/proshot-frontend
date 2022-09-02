@@ -49,12 +49,6 @@ const Login = (props) => {
                         <label htmlFor="last_name" className="block mb-2 text-sm font-medium">Password</label>
                         <input value={formData.password} onInput={(e) => setFormData({ ...formData, password: e.target.value })} type="password" id="last_name" className="bg-slate-50 border border-slate-300 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5 " placeholder="" required="" />
                     </div>
-                    <div className="flex items-start mb-6">
-                        <div className="flex items-center h-5">
-                            <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="" />
-                        </div>
-                        <label htmlFor="remember" className="ml-2 text-sm font-medium">I agree with the <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
-                    </div>
                     <button onClick={formHandler} type="submit" className="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
                 </div>
             </div>

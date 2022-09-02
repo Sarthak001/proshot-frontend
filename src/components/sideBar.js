@@ -46,7 +46,7 @@ const SideBar = () => {
                         </Link>
                     </li>
                     <li className="w-11/12 my-1">
-                        <Link to="/hared">
+                        <Link to="/shared">
                             <div className={
                                 !sideBarOpen ? "flex p-2 cursor-pointer hover:text-slate-100 items-center gap-x-4  hover:bg-slate-800 rounded justify-center" : "flex p-2  cursor-pointer hover:text-slate-100 text-sm items-center gap-x-4  hover:bg-slate-800 rounded"
                             }>
